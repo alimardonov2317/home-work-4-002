@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar__logo">
+                    <a href="#"><img src="./assets/logo.svg" alt="logo"><span>JavaScript</span></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Hero -->
+        <div class="hero">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="hero__content">
+                        <h2 class="hero__title">Array Methods</h2>
+                        <p class="hero__desc">Array metodlari JavaScript tilida massivlar (arrays) bilan ishlashni osonlashtiruvchi vositalardir. Ular yordamida elementlar qo'shish, olib tashlash, qidirish, filtrlash va boshqa ko'plab vazifalar bajariladi.</p>
+                    </div>
+                    <div class="hero__image">
+                        <img src="./assets/hero.png" alt="hero">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Array -->
+         <section class="array">
+            <div class="container">
+                <div class="array__text">
+                    <h2 class="array__title">Array Methods Types</h2>
+                </div>
+                <div class="array__card-wrapper">
+                    <div class="array__card">
+                           <p><span class="array__top">push()</span> <span class="array__desc">Arrayning oxiriga yangi element qo'shadi.</span></p>
+                           <p class="array__code">
+                            <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3</span>];<br>
+                            arr. <span class="array__red">push</span>(<span class="array__red">4</span>);
+                            <span class="array__comm">// arr endi [1, 2, 3, 4]</span>
+                           </p>
+                    </div>
+                    <div class="array__card">
+                           <p><span class="array__top">pop()</span> <span class="array__desc">Arrayning oxiridan elementni olib tashlaydi va qaytaradi.</span></p>
+                           <p class="array__code">
+                            <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3</span>];<br>
+                            <span class="array__blue">let</span> lastElement = arr. <span class="array__red">pop</span>();
+                            <span class="array__comm">// arr endi [1, 2] va lastElement = 3</span>
+                           </p>
+                    </div>
+                    <div class="array__card">
+                           <p><span class="array__top">shift()</span> <span class="array__desc">Arrayning boshidan elementni olib tashlaydi va qaytaradi.</span></p>
+                           <p class="array__code">
+                            <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3</span>];<br>
+                            <span class="array__blue">let</span> firstElement = arr. <span class="array__red">shift</span>();
+                            <span class="array__comm">// arr endi [1, 2] va firstElement = 1</span>
+                           </p>
+                    </div>
+                    <div class="array__card">
+                           <p><span class="array__top">unshift()</span> <span class="array__desc">Arrayning boshiga yangi element qo'shadi.</span></p>
+                           <p class="array__code">
+                            <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3</span>];<br>
+                            arr. <span class="array__red">unshift</span>(<span class="array__red">0</span>);
+                            <span class="array__comm">// arr endi [0, 1, 2, 3]</span>
+                           </p>
+                    </div>
+                    <div class="array__card">
+                           <p><span class="array__top">splice()</span> <span class="array__desc">Arraydan elementlarni olib tashlash yoki qo'shish uchun ishlatiladi.</span></p>
+                           <p class="array__code">
+                            <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3, 4</span>];<br>
+                            arr. <span class="array__red">splice</span>(<span class="array__red">2, 1,</span> <span class="array__green">'newElement'</span>);
+                            <span class="array__comm">// arr endi [1, 2, 'newElement', 4]</span>
+                           </p>
+                    </div>
+                    <div class="array__card">
+                        <p><span class="array__top">slice()</span> <span class="array__desc">Arrayning bir qismini yangi arrayga qaytaradi, original arrayni o'zgartirmaydi.</span></p>
+                        <p class="array__code">
+                         <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3, 4</span>];<br>
+                         <span class="array__blue">let</span> newArr = arr. <span class="array__red">slice</span>( <span class="array__red">1, 3</span> );
+                         <span class="array__comm">// newArr = [2, 3]</span>
+                        </p>
+                    </div>
+                    <div class="array__card">
+                        <p><span class="array__top">concat()</span> <span class="array__desc">Ikki yoki undan ortiq arraylarni birlashtiradi va yangi array qaytaradi.</span></p>
+                        <p class="array__code">
+                         <span class="array__blue">let</span> arr = [<span class="array__red">1, 2</span>];<br>
+                         <span class="array__blue">let</span> arr2 = [<span class="array__red">3, 4</span>];<br>
+                         <span class="array__blue">let</span> combinedArr = arr1. <span class="array__red">concat</span>(arr2);
+                         <span class="array__comm">// combinedArr = [1, 2, 3, 4]</span>
+                        </p>
+                    </div>
+                    <div class="array__card">
+                        <p><span class="array__top">forEach()</span> <span class="array__desc">Har bir element uchun funksiya bajaradi.</span></p>
+                        <p class="array__code">
+                         <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3</span>];<br>
+                         arr. <span class="array__red">forEach</span>(element => <span class="array__red">console.log</span>(element));
+                         <span class="array__comm">// 1 2 3</span>
+                        </p>
+                    </div>
+                    <div class="array__card">
+                    <p><span class="array__top">map()</span> <span class="array__desc">Har bir element uchun yangi qiymatga ega bo'lgan yangi array qaytaradi.</span></p>
+                    <p class="array__code">
+                     <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3</span>];<br>
+                     <span class="array__blue">let</span> newArr = arr.<span class="array__red">map</span>(element => element * <span class="array__red">2</span>);
+                     <span class="array__comm">// newArr = [2, 4, 6]</span>
+                    </p>
+                    </div>
+                    <div class="array__card">
+                    <p><span class="array__top">filter()</span> <span class="array__desc">Shart bo'yicha elementlarni filtrlaydi va yangi array qaytaradi.</span></p>
+                    <p class="array__code">
+                     <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3, 4</span>];<br>
+                     <span class="array__blue">let</span> filteredArr = arr.<span class="array__red">filter</span>(element => element > <span class="array__red">2</span>);
+                     <span class="array__comm">// filteredArr = [3, 4]</span>
+                    </p>
+                    </div>
+                    <div class="array__card">
+                    <p><span class="array__top">reduce()</span> <span class="array__desc">Barcha elementlarni yagona qiymatga qisqartiradi.</span></p>
+                    <p class="array__code">
+                     <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3, 4</span>];<br>
+                     <span class="array__blue">let</span> total = arr.<span class="array__red">reduce</span>((accumulator, currentValue) => accumulator + currentValue, <span class="array__red">0</span>);
+                     <span class="array__comm">// total = 10</span>
+                    </p>
+                    </div>
+                    <div class="array__card">
+                    <p><span class="array__top">find()</span> <span class="array__desc">Shartga mos keladigan birinchi elementni qaytaradi.</span></p>
+                    <p class="array__code">
+                     <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3, 4</span>];<br>
+                     <span class="array__blue">let</span> found = arr.<span class="array__red">find</span>(element => element > <span class="array__red">2</span>);
+                     <span class="array__comm">// found = 3</span>
+                    </p>
+                    </div>
+                    <div class="array__card">
+                    <p><span class="array__top">findIndex()</span> <span class="array__desc">Shartga mos keladigan birinchi elementning indeksini qaytaradi.</span></p>
+                    <p class="array__code">
+                     <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3, 4</span>];<br>
+                     <span class="array__blue">let</span> index = arr.<span class="array__red">findIndex</span>(element => element > <span class="array__red">2</span>);
+                     <span class="array__comm">// index = 2</span>
+                    </p>
+                    </div>
+                    <div class="array__card">
+                    <p><span class="array__top">includes()</span> <span class="array__desc">Elementning mavjudligini tekshiradi.</span></p>
+                    <p class="array__code">
+                     <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3</span>];<br>
+                     <span class="array__blue">let</span> hasTwo = arr.<span class="array__red">includes(2)</span>;
+                     <span class="array__comm">// hasTwo = true</span>
+                    </p>
+                    </div>
+                    <div class="array__card">
+                <p><span class="array__top">sort()</span> <span class="array__desc">Array elementlarini tartiblaydi.</span></p>
+                <p class="array__code">
+                 <span class="array__blue">let</span> arr = [<span class="array__red">3, 1, 4, 2</span>];<br>
+                 arr. <span class="array__red">sort()</span>;
+                 <span class="array__comm">// arr endi [1, 2, 3, 4]</span>
+                </p>
+                    </div>
+                    <div class="array__card">
+                <p><span class="array__top">reverse()</span> <span class="array__desc">Array elementlarini teskari tartibda qaytaradi.</span></p>
+                <p class="array__code">
+                 <span class="array__blue">let</span> arr = [<span class="array__red">1, 2, 3</span>];<br>
+                 arr. <span class="array__red">reverse()</span>;
+                 <span class="array__comm">// arr endi [3, 2, 1]</span>
+                </p>
+                    </div>
+                </div>
+            </div>
+         </section>
+        </main>
+         <!-- Footer -->
+          <footer class="footer">
+            <div class="container">
+                <nav class="footer__navbar">
+                        <div class="navbar__logo">
+                            <a href="#"><img src="./assets/logo.svg" alt="logo"><span>JavaScript</span></a>
+                        </div>
+                        <ul class="footer__collection">
+                               <li class="footer__item">
+                                <a target="_blank" href="https://t.me/samandar_2317" class="footer__link">
+                                    <i class="fa-brands fa-telegram fa-2xl" style="color: #121212;"></i>
+                                </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__link">
+                                        <i class="fa-brands fa-facebook fa-2xl" style="color: #000000;"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__link">
+                                        <i class="fa-brands fa-square-instagram fa-2xl" style="color: #050505;"></i>
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                </nav>
+                
+            </div>
+          </footer>
+</body>
+</html>
